@@ -7,4 +7,4 @@ build:
          export MAVEN_OPTS="-Dmaven.repo.local=${WERCKER_CACHE_DIR}"
          mvn -version
          echo "------"
-         mvn -s settings.xml -Dmaven.repo.local=$WERCKER_CACHE_DIR spring-boot:run
+         mvn -Dmaven.repo.local=$WERCKER_CACHE_DIR spring-boot:run
