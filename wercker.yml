@@ -1,0 +1,9 @@
+box: maven:latest
+build:
+   steps:
+   - script:
+       name: setup mvn local repo
+       code: |
+         export MAVEN_OPTS="-Dmaven.repo.local=${WERCKER_CACHE_DIR}"
+         mvn -version
+         echo "------"         
