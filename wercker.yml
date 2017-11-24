@@ -10,8 +10,6 @@ build:
    - script:
        name: setup
        code: |
-         export http_proxy=www-proxy-hqdc.us.oracle.com:80
-         export https_proxy=www-proxy-hqdc.us.oracle.com:80
          git clone https://github.com/lkodoth/SampleProject.git Sample
          cd Sample
          mvn -s settings.xml -Dmaven.repo.local=$WERCKER_CACHE_DIR spring-boot:run
