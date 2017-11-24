@@ -7,9 +7,4 @@ build:
          export MAVEN_OPTS="-Dmaven.repo.local=${WERCKER_CACHE_DIR}"
          mvn -version
          echo "------"
-   - script:
-       name: setup
-       code: |
-         git clone https://github.com/lkodoth/SampleProject.git Sample
-         cd Sample
          mvn -s settings.xml -Dmaven.repo.local=$WERCKER_CACHE_DIR spring-boot:run
